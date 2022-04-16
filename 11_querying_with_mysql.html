@@ -1,0 +1,64 @@
+<div class="right_container "><div class="content_header"><button id="bookmark_module_btn" class="" type="button"></button></div><div class="content"><div id="lesson_content"><h1>Querying MySQL with Python</h1>
+	<p>Objectives:</p>
+	<ul>
+	<li>Use Python to query a MySQL database</li>
+	</ul>
+	<p>You have already had some experience using SQLAlchemy to execute SQL queries in a sqlite file within Python. The ability to transition between SQL and Python is an important skill for data scientists.&nbsp; This lesson shows you how to connect to your local MySQL server with pymysql.</p>
+	<p><strong>Do NOT use Colab!</strong></p><p><strong>You will need to work in a Jupyter Notebook in the dojo-env.&nbsp;</strong></p>
+	<h2>PyMySQL</h2>
+	<p>PyMySQL is tool that allows us to connect to our MySQL database from Python.&nbsp; We will import it and then install it as our MySQL database.</p>
+	<pre data-language="python"><span class="keyword">import</span> pymysql
+	pymysql.<span class="function call">install_as_MySQLdb</span>()<button class="copy_code_snippet_btn">copy</button></pre>
+	<h2>SQLAlchemy</h2>
+	<p>We will also use SQLAlchemy. You will need to include the following imports:</p>
+	<pre data-language="python"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine
+	<button class="copy_code_snippet_btn">copy</button></pre>
+	<h3>Connecting to SQL Server with PyMySQL and SQLAlchemy</h3>
+	<h5>Formatting the Connection URL</h5>
+	<ul>
+	<li>Then we define the connection to our database as a single string&nbsp;that includes the username, password, host url and database name.
+	<ul>
+	<li>Reference for Database Strings&nbsp;<a href="https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls" target="_blank">link</a></li>
+	</ul>
+	</li>
+	<li>Connection string format:
+	<ul>
+	<li><code>dialect+driver://username:password@host:port/database</code></li>
+	</ul>
+	</li>
+	<li>We will then create our engine using this URL.</li>
+	<li>We will construct a URL that:
+	<ul>
+	<li>uses "mysql" as the dialect</li>
+	<li>"pymysql" as the driver</li>
+	<li>specifies the username and password (that you created during installation of mysql server).</li>
+	<li>our local server: "localhost" (you can skip the port # if you are using the default 3306)</li>
+	<li>and finally the name of the database to create/use</li>
+	</ul>
+	</li>
+	<li>We will have to use this string multiple times, so save it in a variable.</li>
+	</ul>
+	<p>For today's lesson we are going to create a database called "Practice". If you followed our instructions, your username and password are both "root".&nbsp; Otherwise, use whatever values you used for user and password when you installed MySQL server.</p>
+	<pre data-language="python"><span class="comment"># Create connection string using credentials following this format</span>
+	<span class="comment"># connection = "dialect+driver://username:password@host:port/database"</span>
+	connection <span class="keyword operator">=</span> <span class="string">"mysql+pymysql://root:root@localhost/practice"</span>
+	<button class="copy_code_snippet_btn">copy</button></pre>
+	<h4>Create the engine</h4>
+	<p>To make the connection between python and MySQL, you will create an engine using the connection string you just defined.</p>
+	<pre data-language="python">engine <span class="keyword operator">=</span> <span class="function call">create_engine</span>(connection)
+	<button class="copy_code_snippet_btn">copy</button></pre>
+	<p>To confirm that it worked, type "engine" and verify the output:</p>
+	<pre data-language="python">engine
+	<button class="copy_code_snippet_btn">copy</button></pre>
+	<p><code>Engine(mysql+pymysql://root:***@localhost/practice</code></p>
+	<h2>Execute Query</h2>
+	<p>You can also execute any SQL query with pd.read_sql.&nbsp; Remember you can write multi-line strings by using triple quotes around it.</p>
+	<pre data-language="python">q <span class="keyword operator">=</span> <span class="comment docstring">"""SELECT * FROM EXAMPLE_TABLE;"""</span>
+	pd.<span class="function call">read_sql</span>(q, engine)<button class="copy_code_snippet_btn">copy</button></pre>
+	<p>Congratulations! You are now able to query your local MySQL databases with Python!</p>
+			
+			
+			
+			
+			
+			</div></div><textarea id="copy_to_clipboard_value"></textarea></div>

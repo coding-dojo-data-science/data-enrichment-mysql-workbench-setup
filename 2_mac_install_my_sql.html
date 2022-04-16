@@ -1,0 +1,24 @@
+<div class="right_container "><div class="content_header"><button id="bookmark_module_btn" class="" type="button"></button></div><div class="content"><div id="lesson_content"><p>Please skip to the next module if you use Windows.</p><h1>(Mac)MySQL Server Installation</h1><h1>Installation (Mac)</h1>
+	<h2>Installation Steps:</h2>
+	<ol><li>Use this link&nbsp;<a href="https://dev.mysql.com/downloads/mysql/" target="_blank">MySQL Download</a>&nbsp;and select the macOS and DMG option.<figure><img src="https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/mysqlDownload.png" style="width: auto; max-width: 100%; height: auto;"></figure></li><li>Open the download when finished and follow the steps.&nbsp; Be sure to choose the Legacy Password Encryption option.<figure><img src="https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/mysqlConfigurationOne.png" style="width: auto; max-width: 100%; height: auto;"></figure></li><li>Create a password and remember it, it will be used to connect to the MySQL server later.<figure><img src="https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/mysqlConfigurationTwo.png" style="width: auto; max-width: 100%; height: auto;"></figure></li></ol>
+	<h2>Accessing the MySQL server:</h2>
+	<ol><li>Open the System Preferences pane and select the MySQL server.<figure><img src="https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/system_preferences.png" style="width: auto; max-width: 100%; height: auto;"></figure></li><li>This will be where we will start/stop the MySQL server.<figure><img src="https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/mysql_server.png" style="width: auto; max-width: 100%; height: auto;"></figure></li></ol>
+	<h2>Create mysql alias for terminal connection:</h2>
+	<p>Run the below command in the terminal window</p><pre>echo $SHELL
+	</pre><ul><li>If the response ends with zsh, then use this command in the terminal window</li></ul>
+	<pre>echo 'alias mysql="/usr/local/mysql/bin/mysql"' &gt;&gt; ~/.zshrc &amp;&amp; source ~/.zshrc</pre>
+	<ul><li>If the response ends with bash, then use this command in the terminal window</li></ul><pre>echo 'alias mysql="/usr/local/mysql/bin/mysql"' &gt;&gt; ~/.bash_profile &amp;&amp; source ~/.bash_profile
+	</pre><p><br></p><p>Let's take a look at what line is doing.</p>
+	<ul><li><code>echo</code>&nbsp;will write to a file.</li><li><code>alias mysql="/usr/local/mysql/bin/mysql"</code><ul><li><code>alias</code>&nbsp;will create a variable for our terminal to use called mysql.</li><li><code>/usr/local/mysql/bin/mysql</code>&nbsp;is the location of the mysql executable we just installed.</li></ul></li><li><code>&gt;&gt;</code>&nbsp;will append to a file.</li><li><code>~/.zshrc</code>&nbsp;(&nbsp; is a file that the terminal window will look at for any commands to run.</li><li><code>&amp;&amp;</code>&nbsp;will run another command.</li><li><code>source ~/.zshrc</code>&nbsp;(or source ~/.bash_profile) will make the alias we just created available in the terminal window.</li></ul>
+	<h2>Connect to mysql shell via terminal:</h2>
+	<p>Run the below command in the terminal window.</p>
+	<pre>mysql -uroot -p</pre>
+	<p>Enter your mysql password when prompted.&nbsp; If you see this, you have correctly connected to the mysql server via the terminal.&nbsp; If not see your instructor for help.&nbsp; Type&nbsp;<code>quit</code>&nbsp;to exit the shell.</p>
+	<figure><img class="img-thumbnail" src="https://s3.amazonaws.com/General_V88/boomyeah2015/codingdojo/curriculum/content/chapter/mysql_shell.png" style="line-height: 1.42857; width: auto;"></figure><p></p><p><br></p><h1><b>Open MySQL Workbench</b></h1>
+	<p>The installation should have included the MySQL Workbench app. When you open it, you should see that you are connected:</p><p><b><img src="https://lh4.googleusercontent.com/aQaRuFLzFJc9YuYBEI0Ht8iZEsZQYCkGng089YzCCxVQcevoALkikyyoPaa7QTWBbEKdxBbL-Yr4iAPwxelFyPxy41cy0Ovd0RGzd6h1sFpocSHXPmLoQUH-BFyCapIOHCzpg1wW" width="624" height="284" style="margin-left:0px;margin-top:0px;"></b><br></p>
+	<p><br></p>
+			
+			
+			
+			
+			</div></div><textarea id="copy_to_clipboard_value"></textarea></div>

@@ -1,0 +1,37 @@
+<div class="right_container "><div class="content_header"><button id="bookmark_module_btn" class="" type="button"></button></div><div class="content"><div id="lesson_content"><p>Please skip to the next module if you use Mac.</p><h1><b>(Windows)MySQL Server Installation</b></h1>
+	<h1><b>Installation (Windows 10)</b></h1>
+	<ol><li>Download the required MySQL software from the MySQL <a href="https://dev.mysql.com/downloads/mysql/" target="_blank">website</a> Choose the MySQL Installer MSI Option.</li></ol>
+	<p><img src="https://lh5.googleusercontent.com/o-IrTK9oTB091B28m7noEW1gpNnFsYtWvIbZqqoFk44wD8YMKSZFfLBIjOHoQpm8dEhhlO_52ZVBp1J7_hrw0Cm_QD-lFHPYpT-CvxxRXqbSlQkvaFcGo5HyxJhgIBqXURD22sH3" width="624" height="376" style="margin-left:0px;margin-top:0px;"></p>
+	<p><img src="https://lh6.googleusercontent.com/hplM1qLCtaP63acEXH7TX5VLopXRREeLSZStyU_u2mYMjC628a5TbLSWVhKCPeQg8dUquYq1xUCvenD26D7ZKGSmWLwsn1ehUBW00xJgvg5k1TllT6hjGcmNENqICJ7lfY-BIJtG" width="624" height="273" style="margin-left:0px;margin-top:0px;"></p>
+	<p>You can skip signing up for an account&nbsp;</p>
+	<p><img src="https://lh6.googleusercontent.com/QL4wnCtp6p8oNymwAGVh84nvgyczeVXCY7b_2soUDpsQ8e6DhElNSzyd7Ho0YnFXh8SROmqhukCeIfwIojjtY4Ku1cGiO3AcsMtAOfpcy-7HWBc8oqbO5CysP8kRDSwV7rvb4A5X" width="516" height="361" style="margin-left:0px;margin-top:0px;"></p>
+	<p>Once the installer has downloaded, open it and agree to let it make changes to your computer.</p>
+	<p>Then Select “Custom”</p>
+	<p><img src="https://lh6.googleusercontent.com/GMOMcI-5rVeSC054aHYQqrQ8_Mi6EjXGOj3lJpKB6yrFOM-nKxjjxBmoH5LRBk07qSfdWYO_qpTjxm1PxAclCG-HVytDClhUGi3jB7xAXaRx72wHERWTogpeHZ38eGGGm4Y3zNzr" width="482" height="464" style="margin-left:0px;margin-top:0px;"></p>
+	<p>Open the “MySQL Servers” menu</p>
+	<p><img src="https://lh5.googleusercontent.com/goGAllaAsshHV9lGug44XF57YioLS8EmGGmWniqQgLGKppcKKWCQaHsXnHnY4iq12S6EnzMG2UFAuube1vqXa1RAVIH3jZVJc3rfrorZliuftD_6Ur5AMGT6Disj2lJNmpE5N8Zq" width="624" height="433" style="margin-left:0px;margin-top:0px;"></p>
+	<p>From the menu, choose MySQL 8.0 and then the top version.&nbsp;Add it to the "Products to Be Installed" box with the arrow</p>
+	<p><img src="https://lh6.googleusercontent.com/Y5cXSt1saG2dT7tGG4NIN4UgXRh2szq4i0YjAF9uY2stWqUkLlrXZpGuSeG1GlcFgOzSe_YwNOl_Oks6LcbYHM_Wo1jbxOfk9TbcTjCe0yx--SzXOE6Gkn_Xers45l5Mg-AkQSSW" width="467" height="444" style="margin-left:0px;margin-top:0px;"></p>
+	<p>Then open the “Applications” Menu and select the top most version of MySQL Workbench. Add it to the "Products to Be Installed" box with the arrow.</p><p><img src="https://lh6.googleusercontent.com/y8X552o-pqLO_tkQjhdP5C3e7FA7pPeuhx-GyOTi6gQaHvu9KGpR-T8Uv6SWlxzJIKnPjFBvrXqxIPnFktWen-PPsmjbCuZMrIduVGBt2clcMHCYWLij3PCQbEdu-S5mAoIq4PEj" width="468" height="420" style="margin-left:0px;margin-top:0px;"></p>
+	<p>Once you have selected both the MySQL Server and MySQL workbench, click next to continue.</p>
+	<p>&nbsp;</p>
+	<p>2. Follow the installer guidelines, with the following considerations:</p><ol><ul><li><strong>Choose the password "root" for your root user password</strong></li><li><strong>When asked about which authentication method you should pick, DO NOT select the first method but select 'Use Legacy Authentication Method' (see below).</strong></li></ul></ol>
+	<p>For "Windows Service" make sure you have the "Configure MySQL Server as a Windows Service" and "Start the MySQL Server at System Startup" options selected.</p>
+	<p><img alt="mysql-service" src="https://lh3.googleusercontent.com/WaH0HzjpwoB738E61DU8xk9RbrihZLYK4sXNczbHt3FXd7L_sqBBd7vBa_mOHDPIqVuEvDWszp8Qja48QGC5d_Q5dIY0ykL35dvsvK-_clBJdjoO4x0GlZfI2J4dSsTdPhkitbL7" width="624" height="333" style="margin-left:0px;margin-top:0px;"></p>
+	<p>The installer will configure your Windows system to run the MySQL Server automatically on startup, listening on the default port 3306, as well as establish the required environment variables to run MySQL tools from a Windows shell.</p>
+	<p>Open a MySQL shell from CMD/PowerShell or <strong>GitBash</strong> to make sure everything is working correctly:&nbsp; (You can find this by typing CMD into the tool bar search and opening the Command Prompt App)</p>
+	<p><img src="https://lh4.googleusercontent.com/nqFwzR-HufxJYsNwQE9isluCGNEeCtQruSAHNsrPAaQVnCWN9incKAYLPqlHSUZ5R7wEdFprq_K57QFS2DZBIfBeCPJ_abQAZPApjMlRXAe2y-fFvUH6NFB031RWfU9QifAdqDkX" width="564" height="222" style="margin-left:0px;margin-top:0px;"></p>
+	<p>mysql -u root -p and enter "root" when prompted for the password.</p>
+	<p>Success will look like this:</p>
+	<p><img src="https://lh5.googleusercontent.com/ku-QpIDgfInmHeWx0L6dFmvOX_7issObkJwABMm141yGgQVyKIetlU4qd9WHb_ziOXfWJo3LMX7YELNHAI-pvJ42Eh1cKX_hvap34tbb8st_llRlzj5WwnHqup_DhKX_Z2_bkK2o" width="624" height="419" style="margin-left:0px;margin-top:0px;"></p>
+	<p><b>Troubleshooting:</b></p>
+	<p>Problem: Running mysql in CMD/PowerShell gives the following error: 'mysql' is not recognized...</p>
+	<p>Solution: Make sure you have an Environment Variable PATH to your MySQL executables. Likely to be in C:\\Program Files\MySQL\MySQL Server 5.7\bin</p>
+	<p>If you encounter any problems during installation, please do not hesitate to consult your instructor.</p>
+	<h1>&nbsp;</h1>
+	<h1><b>Open MySQL Workbench</b></h1>
+	<p>The installation should have included the MySQL Workbench app. When you open it, you should see that you are connected:</p>
+	<h1><b><img src="https://lh4.googleusercontent.com/aQaRuFLzFJc9YuYBEI0Ht8iZEsZQYCkGng089YzCCxVQcevoALkikyyoPaa7QTWBbEKdxBbL-Yr4iAPwxelFyPxy41cy0Ovd0RGzd6h1sFpocSHXPmLoQUH-BFyCapIOHCzpg1wW" width="624" height="284" style="margin-left:0px;margin-top:0px;"></b></h1>
+	<h1></h1>
+			
+			</div></div><textarea id="copy_to_clipboard_value"></textarea></div>
