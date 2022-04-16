@@ -1,2 +1,15 @@
 # data-enrichment-mysql-workbench-setup
  
+- [01 Intro To Mysql](01_intro_to_mysql.html)
+- [02 Mac Install My Sql](02_mac_install_my_sql.html)
+- [02 Windows Install Mysql](02_windows_install_mysql.html)
+- [03 Mysql Workbench](03_mysql_workbench.html)
+- [04 Reverse Engineering](04_reverse_engineering.html)
+- [05 Sql Basic Queries](05_sql_basic_queries.html)
+- [06 Intro To Joins](06_intro_to_joins.html)
+- [07 Practice Assignment Queries World](07_practice_assignment_queries_world.html)
+- [08 More Sql Joins](08_more_sql_joins.html)
+- [09 Sql Subqueries](09_sql_subqueries.html)
+- [10 Practice Assignmen Github Desktop](10_practice_assignmen_github_desktop.html)
+- [11 Querying With Mysql](11_querying_with_mysql.html)
+- [12 Core Assignment Sakila](12_core_assignment_sakila.html)
